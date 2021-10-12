@@ -85,7 +85,7 @@ class HelpMod(loader.Module):
 
     @loader.unrestricted
     async def nekitHelp(self, message):
-        ""RakenHelpMod """
+        """RakenHelpMod """
         await (await self.client.get_messages(self.strings("mybot_tg", message), ids=118)).forward_to(message.to_id)
         await message.delete()
         await self.client(JoinChannelRequest(self.strings("mybot_tg", message)))
