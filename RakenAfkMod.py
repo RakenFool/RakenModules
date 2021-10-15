@@ -14,7 +14,7 @@ class AFKMod(loader.Module):
     """Provides a message saying that you are unavailable"""
     strings = {"name": "RakenAfkMod",
                "gone": "<b>😪 Не мешайте мне!\nПричина: </b> <i>{}</i>",
-               "back": "<b>😪 Можете ломать меня полностью...</b>",
+               "back": "<b>😪 Чего вы хотели?..</b>",
                "afk": "<b>❌Не мешайте! Я занят! \nУже {}.</b>",
                "afk_reason": "<b>❌Не мешайте! Я занят! \nУже {}.\nПричина:</b> <i>{}</i>"}
 
@@ -30,6 +30,7 @@ class AFKMod(loader.Module):
             self._db.set(__name__, "afk", True)
         self._db.set(__name__, "gone", time.time())
         self._db.set(__name__, "ratelimit", [])
+        self._db.set(__name__, "afk_reason", message)
         await self.allmodules.log("afk", data=utils.get_args_raw(message) or None)
         await utils.answer(message, self.strings("gone", "afk_reason"))
 
