@@ -13,10 +13,10 @@ logger = logging.getLogger(__name__)
 class AFKMod(loader.Module):
     """Provides a message saying that you are unavailable"""
     strings = {"name": "RakenAfkMod",
-               "gone": "<b>✅ Теперь я в режиме Afk...\nПричина: </b> <i>{}</i>",
-               "back": "<b>✅Я больше не в режиме Afk!</b>",
-               "afk": "<b>ℹ️Я сейчас в режиме Afk!  \nУже {}.</b>",
-               "afk_reason": "<b>ℹ️Я сейчас в режиме Afk! \nУже {}.\nПричина:</b> <i>{}</i>"}
+               "gone": "<b>😪 Не мешайте мне!\nПричина: </b> <i>{}</i>",
+               "back": "<b>😪 Можете ломать меня полностью...</b>",
+               "afk": "<b>❌Не мешайте! Я занят! \nУже {}.</b>",
+               "afk_reason": "<b>❌Не мешайте! Я занят! \nУже {}.\nПричина:</b> <i>{}</i>"}
 
     async def client_ready(self, client, db):
         self._db = db
@@ -31,7 +31,7 @@ class AFKMod(loader.Module):
         self._db.set(__name__, "gone", time.time())
         self._db.set(__name__, "ratelimit", [])
         await self.allmodules.log("afk", data=utils.get_args_raw(message) or None)
-        await utils.answer(message, self.strings("gone", "afk" message))
+        await utils.answer(message, self.strings("gone", "afk", message))
 
     async def unafkcmd(self, message):
         """Выйти из Afk"""
