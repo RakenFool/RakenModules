@@ -30,9 +30,9 @@ class AFKMod(loader.Module):
             self._db.set(__name__, "afk", True)
         self._db.set(__name__, "gone", time.time())
         self._db.set(__name__, "ratelimit", [])
-        self._db.set(__name__, "afk_reason", message)
+        self._db.set(__name__, {}).setdefault("ratelimit", []).append(utils.get_chat_id(message))
         await self.allmodules.log("afk", data=utils.get_args_raw(message) or None)
-        await utils.answer(message, self.strings("gone", "afk_reason"))
+        await utils.answer(message, self.strings("gone", message))
 
     async def unafkcmd(self, message):
         """Выйти из Afk"""
