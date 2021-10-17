@@ -96,7 +96,11 @@ class RakenMod(loader.Module):
                'no_args_or_reply':'<b>❌ Нет аргументов или реплая.</b>',
                'deleted': '<b>✅ Все сообщения от {} удалены.</b>',
                'del_u_search': '<b>✅ Поиск удалённых аккаунтов...</b>',
-               'del_u_kicking': '<b>✅ Кик удалённых аккаунтов...</b>'}
+               'del_u_kicking': '<b>✅ Кик удалённых аккаунтов...</b>'
+               "reply_start": "<b>❌Ответьте на сообщение, чтобы отметить где начать.</b>",
+               "invalid_chat": "<b>❌Это не чат.</b>",
+               "needs_admin": "<b>❌ Иди попрошайничать админку. У тебя ее здесь нет.</b>",
+               "recovered": "✅Удаленные сообщения {} восстановлены. Впервые отправлено {} этим человеком {}, удалено {} этим человеком {}"}
 
 
     async def client_ready(self, db, client: TelegramClient):
@@ -680,11 +684,7 @@ async def check_media(message, reply):
         except:
             pass
 
-    strings = {"reply_start": "<b>❌Ответьте на сообщение, чтобы отметить где начать.</b>",
-               "invalid_chat": "<b>❌Это не чат.</b>",
-               "needs_admin": "<b>❌ Иди попрошайничать админку. У тебя ее здесь нет.</b>",
-               "recovered": "✅Удаленные сообщения {} восстановлены. Впервые отправлено {} этим человеком {}, удалено {} этим человеком {}"}
-
+    
     @loader.group_admin
     @loader.ratelimit
     async def recoverdeletedcmd(self, message):
