@@ -25,7 +25,7 @@ warnings.simplefilter("error", Image.DecompressionBombWarning)
 class StickersMod(loader.Module):
     """Действия со стикерами"""
     strings = {"name": "RakenStickerMod",
-               "stickers_username_cfg_doc": "Бот для создания стикеров",
+               "stickers_username_cfg_doc": "Модуль для создания стикеров",
                "sticker_size_cfg_doc": "Размер одного стикера",
                "default_sticker_emoji_cfg_doc": "Эмодзи стикера по умолчанию",
                "what_pack": "<b>Ошибка: </b>❌ Укажите название стикерпака",
@@ -36,7 +36,7 @@ class StickersMod(loader.Module):
                "animated_pack": "<b>Ошибка: </b>❌ Обычные стикеры не могут быть добавлены в паки анимированных стикеров",
                "new_pack": "ℹ️ Сначала создайте новый стикерпак",
                "pack_full": "<b>Ошибка: </b>❌ Стикерпак переполнен. Удалите несколько стикеров из существующего или создайте новый",
-               "added": "<b>✔️ Готово. Пак стикеров: </b> <a href='{}'>стикерпак</a><b>!</b>",
+               "added": "<b>✅ Готово. Пак стикеров: </b> <a href='{}'>*тык*</a><b>!</b>",
                "bad_animated_sticker": "<b>ℹ️ Ответьте на анимированный стикер, чтобы конвертировать его в гифку</b>"}
 
     def __init__(self):
