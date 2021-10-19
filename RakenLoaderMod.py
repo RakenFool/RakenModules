@@ -192,7 +192,7 @@ class Loader(loader.Module):
             uid = "__extmod_" + str(uuid.uuid4())
         else:
             uid = name.replace("%", "%%").replace(".", "%d")
-        module_name = "friendly-telegram.modules." + uid
+        
         try:
             try:
                 spec = ModuleSpec(module_name, StringLoader(doc, origin), origin=origin)
