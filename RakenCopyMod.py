@@ -51,7 +51,7 @@ class CopyMod(loader.Module):
         if s: await message.delete()
         if not s:
             for i in range(0,11):
-                await message.edit(f"Узнаём информацию об аккаунте... {i*10}%\n[{(i*'#').ljust(10, '–')}]")
+                await message.edit(f"Узнаём информацию об аккаунте... {i*10}%\n[{(i*'⬜️').ljust(10, '⬛️')}]")
                 await sleep(0.3)
         if a:
             avs = await message.client.get_profile_photos('me')
