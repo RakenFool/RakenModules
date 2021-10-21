@@ -95,3 +95,4 @@ class UserInfoMod(loader.Module):
 
     async def client_ready(self, client, db):
         self.client = client
+
