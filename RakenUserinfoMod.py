@@ -104,10 +104,7 @@ class UserInfoMod(loader.Module):
                 full = await self.client(GetFullUserRequest(args[0]))
             except ValueError:
                 return await utils.answer(message, self.strings("find_error", message))
-        logger.debug(full)
-        
-        replyid = self.strings("id", message).format(utils.escape_html(full.user.id))
-        
-
+        logger.debug(full)        
+        replyid = self.strings("id", message).format(utils.escape_html(full.user.id))        
     async def client_ready(self, client, db):
         self.client = client
