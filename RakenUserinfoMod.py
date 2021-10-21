@@ -92,19 +92,6 @@ class UserInfoMod(loader.Module):
             await utils.answer(message, self.strings("permalink_txt", message).format(uid=user.id, txt=args[1]))
         else:
             await utils.answer(message, self.strings("permalink_uid", message).format(uid=user.id))
-    async def idcmd(self, message):
-        """Use in reply to get user id"""
-        if message.is_reply:
-            full = await self.client(GetFullUserRequest((await message.get_reply_message()).from_id))
-        else:
-            args = utils.get_args(message)
-            if not args:
-                return await utils.answer(message, self.strings("no_args_or_reply", message))
-            try:
-                full = await self.client(GetFullUserRequest(args[0]))
-            except ValueError:
-                return await utils.answer(message, self.strings("find_error", message))
-        logger.debug(full)        
-        replyid = self.strings("id", message).format(utils.escape_html(full.user.id))        
+
     async def client_ready(self, client, db):
         self.client = client
