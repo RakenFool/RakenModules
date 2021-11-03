@@ -4,7 +4,6 @@ import logging
 from telethon.tl.functions.users import GetFullUserRequest
 
 logger = logging.getLogger(__name__)
-
 @loader.tds
 class UserInfoMod(loader.Module):
     """Tells you about people"""
