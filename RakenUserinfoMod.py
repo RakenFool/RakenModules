@@ -22,8 +22,8 @@ class UserInfoMod(loader.Module):
                "find_error": "<b>❌Не смог найти пользователя.</b>",
                "no_args_or_reply": "<b>❌Нужен аргумент или реплай.</b>",
                "provide_user": "❌Напишите кого найти.",
-               "searching_user": "✅Ищу пользователя...",
-               "cannot_find": "❌Не нашёл пользователя.r.",
+               "searching_user": "🔄Ищу пользователя...",
+               "cannot_find": "❌Не нашёл пользователя.",
                "permalink_txt": "<a href='tg://user?id={uid}'>{txt}</a>",
                "permalink_uid": "<a href='tg://user?id={uid}'>Ссылка на {uid}</a>",
                "encode_cfg_doc": "Encode unicode characters"}
