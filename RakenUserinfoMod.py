@@ -109,5 +109,6 @@ class UserInfoMod(loader.Module):
         logger.debug(full)
         if full.user.last_name is not None:
             reply += self.strings("id", message).format(utils.escape_html(full.user.id))
-     async def client_ready(self, client, db):
+     
+    async def client_ready(self, client, db):
         self.client = client
