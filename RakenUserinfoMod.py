@@ -107,7 +107,7 @@ class UserInfoMod(loader.Module):
             except ValueError:
                 return await utils.answer(message, self.strings("find_error", message))
         logger.debug(full)
-        await utils.answer(message, self.strings("id", message).format(uid=user.id))
+        await utils.answer(message, self.strings("id", message))
      
     async def client_ready(self, client, db):
         self.client = client
