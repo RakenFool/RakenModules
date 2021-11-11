@@ -107,8 +107,7 @@ class UserInfoMod(loader.Module):
             except ValueError:
                 return await utils.answer(message, self.strings("find_error", message))
         logger.debug(full)
-        if full.user.last_name is not None:
-            reply += self.strings("id", message).format(utils.escape_html(full.user.id))
+        await utils.answer(message, self.strings("id", message).format(uid=user.id))
      
     async def client_ready(self, client, db):
         self.client = client
