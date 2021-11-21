@@ -55,7 +55,8 @@ class AnimationMod(loader.Module):
           await sleep(0.3)
     except ValueError:
       await message.edit("〰️ Не хватает аргументов.")   
-   @loader.owner
+   
+  @loader.owner
   async def mooncmd(self, message):
     args = utils.get_args_raw(message)
     try:
@@ -66,6 +67,8 @@ class AnimationMod(loader.Module):
           await sleep(0.3)
     except ValueError:
       await message.edit("〰️ Не хватает аргументов.")
+  
+  @loader.owner
   async def portalcmd(self, message):
     """Используй .portal <аргументы>"""
     args = utils.get_args_raw(message)
