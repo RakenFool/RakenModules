@@ -82,14 +82,14 @@ class AnimationMod(loader.Module):
       await message.edit("〰️ Не хватает аргументов.")    
   
   @loader.owner
-  numb == int(0)
   async def numbercmd(self, message):
+    numb = int(0)
     args = utils.get_args_raw(message)
     try:
       args = int(args)
       for _ in range(args):
               for number in [numb]:
-                numb == int(numb+1)
+                numb = int(numb+1)
                 await message.edit(number)
                 await sleep(0.5)
     except ValueError:
