@@ -81,3 +81,15 @@ class AnimationMod(loader.Module):
     except ValueError:
       await message.edit("〰️ Не хватает аргументов.")    
   
+  @loader.owner
+  async def numbercmd(self, message):
+    args = utils.get_args_raw(message)
+    try:
+      args = int(args)
+      for _ in range(args):
+              for number in [numb]:
+                numb == numb+1
+                await message.edit(number)
+                await sleep(0.5)
+    except ValueError:
+      await message.edit("〰️ Не хватает аргументов.")
