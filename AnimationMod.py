@@ -83,13 +83,13 @@ class AnimationMod(loader.Module):
   
   @loader.owner
   async def numbercmd(self, message):
-    numb = int(0)
+    numb = 0
     args = utils.get_args_raw(message)
     try:
       args = int(args)
       for _ in range(args):
               for number in [numb]:
-                numb = int(numb+1)
+                numb = numb+1
                 await message.edit(number)
                 await sleep(0.5)
     except ValueError:
