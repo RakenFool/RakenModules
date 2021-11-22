@@ -92,7 +92,7 @@ class AnimationMod(loader.Module):
       for _ in range(args):
         for son in ['ㅤ         \n  ㅤ \n 😴', 'ㅤ         \n  ㅤ💤 \n 😴', 'ㅤ        💤 \n  ㅤ \n 😴']:
           await message.edit(son)
-          await sleep(0.1)
+          await sleep(0.5)
     except ValueError:
       await message.edit("〰️ Не хватает аргументов.")    
   
