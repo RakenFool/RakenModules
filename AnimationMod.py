@@ -83,3 +83,16 @@ class AnimationMod(loader.Module):
     except ValueError:
       await message.edit("〰️ Не хватает аргументов.")    
   
+  @loader.owner
+  async def sleepcmd(self, message):
+    """Используй .sleep <аргументы>"""
+    args = utils.get_args_raw(message)
+    try:
+      args = int(args)
+      for _ in range(args):
+        for sleep in ['\n \n \n 😴', '\n \n      💤 \n 😴', 'ㅤ        💤\n \n \n 😴']:
+          await message.edit(sleep)
+          await sleep(0.1)
+    except ValueError:
+      await message.edit("〰️ Не хватает аргументов.")    
+  
