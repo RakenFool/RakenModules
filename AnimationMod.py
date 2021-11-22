@@ -52,9 +52,9 @@ class AnimationMod(loader.Module):
     try:
       args = int(args)
       for _ in range(args):
-        for moonf in ['🌚', '🌝']:
+        for moonf in ['🌚ㅤ', '🌝ㅤ']:
           await message.edit(moonf)
-          await sleep(0.3)
+          await sleep(0.5)
     except ValueError:
       await message.edit("〰️ Не хватает аргументов.")   
    
@@ -79,7 +79,7 @@ class AnimationMod(loader.Module):
       for _ in range(args):
         for portal in ['🕳 \n \n \n 🕳', '🕳 \n 🎾 \n \n 🕳', '🕳 \n \n 🎾 \n 🕳']:
           await message.edit(portal)
-          await sleep(0.3)
+          await sleep(0.1)
     except ValueError:
       await message.edit("〰️ Не хватает аргументов.")    
   
