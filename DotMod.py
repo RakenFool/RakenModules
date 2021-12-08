@@ -8,14 +8,17 @@ class DotMod(loader.Module):
 		""".dotpluson включает модуль Dot+."""
 		dot = 11
 		await message.edit("<b>Dot+ On.</b>")
+		
         async def dotoncmd(self, message):
 		""".doton включает модуль Dot."""
 		dot = 1
 		await message.edit("<b>Dot On.</b>")
+		
         async def dotplusoffcmd(self, message):
 		""".dotoff выключает модуль Dot+."""
 		dot = 21
 		await message.edit("<b>Dot+ Off.</b>")
+		
         async def dotoffcmd(self, message):
 		""".dotoff выключает модуль Dot."""
 		dot = 1
@@ -34,6 +37,7 @@ class DotMod(loader.Module):
 					await message.edit(txt)
 				else:
 					await message.edit(txt + ".")
+					
                  elif dot == 21:
 			me = (await message.client.get_me())
 			if message.sender_id == me.id:
