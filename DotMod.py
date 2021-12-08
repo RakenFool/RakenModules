@@ -34,7 +34,7 @@ class DotMod(loader.Module):
 					await message.edit(txt)
 				else:
 					await message.edit(txt + ".")
-     if dot == 21:
+                 elif dot == 21:
 			me = (await message.client.get_me())
 			if message.sender_id == me.id:
 				text = message.text.lower()
