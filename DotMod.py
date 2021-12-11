@@ -7,8 +7,8 @@ class DotMod(loader.Module):
 	async def dotplusoncmd(self, message):
 		""".dotpluson включает модуль Dot+."""
 		dot = 11
-		await message.edit("<b>Dot+ On.</b>")		
-        async def dotoncmd(self, message):
+		await message.edit("<b>Dot+ On.</b>")	
+	async def dotoncmd(self, message):
 		""".doton включает модуль Dot."""
 		dot = 1
 		await message.edit("<b>Dot On.</b>")		
