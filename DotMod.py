@@ -4,25 +4,25 @@ class DotMod(loader.Module):
 	"""Данный модуль ставит точку в конце сообщения. Credit: @creative_tg1. Что я сделал? Запихнул модуль в ссылку, сделал команду только для заглавной буквы в начале."""
 	strings = {"name": "Dot"}
 	dot = 0
+	me = (await message.client.get_me())
 	async def dotplusoncmd(self, message):
 		""".dotpluson включает модуль Dot+."""
-		dot = 11
+		dot = (11)
 		await message.edit("<b>Dot+ On.</b>")	
 	async def dotoncmd(self, message):
 		""".doton включает модуль Dot."""
-		dot = 21
+		dot = (21)
 		await message.edit("<b>Dot On.</b>")		
 	async def dotplusoffcmd(self, message):
 		""".dotoff выключает модуль Dot+."""
-		dot = 1
+		dot = (1)
 		await message.edit("<b>Dot+ Off.</b>")		
 	async def dotoffcmd(self, message):
 		""".dotoff выключает модуль Dot."""
-		dot = 1
+		dot = (1)
 		await message.edit("<b>Dot Off.</b>")	
 	async def watcher(self, message):
-		if dot == (11):
-			me = (await message.client.get_me())
+		if dot == 11:			
 			if message.sender_id == me.id:
 				text = message.text.lower()
 				textup = text[0].upper()
@@ -33,8 +33,7 @@ class DotMod(loader.Module):
 					await message.edit(txt)
 				else:
 					await message.edit(txt + ".")
-		elif dot == (21):
-			me = (await message.client.get_me())
+		elif dot == 21:			
 			if message.sender_id == me.id:
 				text = message.text.lower()
 				textup = text[0].upper()
