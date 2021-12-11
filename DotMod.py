@@ -31,6 +31,8 @@ class DotMod(loader.Module):
 				lentxt = len(txt) - 1
 				if txt[lentxt] == "?" or txt[lentxt] == "!" or txt[lentxt] == ".":
 					await message.edit(txt)
+			else:
+				await message.edit(txt + ".")
 			elif dot == 21:
 				me = (await message.client.get_me())
 					if message.sender_id == me.id:
@@ -39,5 +41,3 @@ class DotMod(loader.Module):
 						textdown = text[1:]
 						txt = textup + textdown
 						lentxt = len(txt) - 1
-			else:
-				await message.edit(txt + ".")
