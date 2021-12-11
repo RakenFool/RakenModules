@@ -37,7 +37,7 @@ class DotMod(loader.Module):
 					text = message.text.lower()
 					textup = text[0].upper()
 					textdown = text[1:]
-			    		txt = textup + textdown
+					txt = textup + textdown
 			 		lentxt = len(txt) - 1
 			else:
 				await message.edit(txt + ".")					
