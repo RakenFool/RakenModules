@@ -10,11 +10,11 @@ class DotMod(loader.Module):
 		await message.edit("<b>Dot+ On.</b>")	
 	async def dotoncmd(self, message):
 		""".doton включает модуль Dot."""
-		dot = 1
+		dot = 21
 		await message.edit("<b>Dot On.</b>")		
 	async def dotplusoffcmd(self, message):
 		""".dotoff выключает модуль Dot+."""
-		dot = 21
+		dot = 1
 		await message.edit("<b>Dot+ Off.</b>")		
 	async def dotoffcmd(self, message):
 		""".dotoff выключает модуль Dot."""
