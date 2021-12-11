@@ -40,5 +40,4 @@ class DotMod(loader.Module):
 					txt = textup + textdown
 					lentxt = len(txt) - 1
 			else:
-				await message.edit(txt + ".")					
-			
+				await message.edit(txt + ".")
