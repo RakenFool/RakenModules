@@ -21,7 +21,7 @@ class DotMod(loader.Module):
 		dot = 1
 		await message.edit("<b>Dot Off.</b>")	
 	async def watcher(self, message):
-		if dot == 11:
+		if dot == (11):
 			me = (await message.client.get_me())
 			if message.sender_id == me.id:
 				text = message.text.lower()
@@ -33,7 +33,7 @@ class DotMod(loader.Module):
 					await message.edit(txt)
 				else:
 					await message.edit(txt + ".")
-		elif dot == 21:
+		elif dot == (21):
 			me = (await message.client.get_me())
 			if message.sender_id == me.id:
 				text = message.text.lower()
