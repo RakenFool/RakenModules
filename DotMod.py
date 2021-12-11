@@ -34,10 +34,10 @@ class DotMod(loader.Module):
 			elif dot == 21:
 				me = (await message.client.get_me())
 				if message.sender_id == me.id:
-				text = message.text.lower()
-				textup = text[0].upper()
-				textdown = text[1:]
-				txt = textup + textdown
-				lentxt = len(txt) - 1
+					text = message.text.lower()
+					textup = text[0].upper()
+					textdown = text[1:]
+					txt = textup + textdown
+					lentxt = len(txt) - 1
 			else:
 				await message.edit(txt + ".")
