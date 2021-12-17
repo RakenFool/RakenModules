@@ -17,5 +17,10 @@ class DotMod(loader.Module):
 			me = (await message.client.get_me())
 			if message.sender_id == me.id:
 				text = message.text.lower()
-				txt = text[0].upper()
+				textup = text[0].upper()
+				textdown = text[1:]
+				txt = textup + textdown
+				lentxt = len(txt) - 1
 				await message.edit(txt)
+					
+				
