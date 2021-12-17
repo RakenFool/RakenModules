@@ -1,7 +1,7 @@
 from .. import loader
 
 class DotMod(loader.Module):
-	"""Данный модуль ставит точку в конце сообщения. Credit: @creative_tg1. Что я сделал? Запихнул модуль в ссылку, сделал команду только для заглавной буквы в начале."""
+	"""Данный модуль данный модуль делает первую букву сообщения заглавной. Credit: @creative_tg1. Что я сделал? Запихнул модуль в ссылку, сделал команду только для заглавной буквы в начале."""
 	strings = {"name": "Dot"}
 	dot = 0	
 	async def dotplusoncmd(self, message):
@@ -18,10 +18,4 @@ class DotMod(loader.Module):
 			if message.sender_id == me.id:
 				text = message.text.lower()
 				textup = text[0].upper()
-				textdown = text[1:]
-				txt = textup + textdown
-				lentxt = len(txt) - 1
-				if txt[lentxt] == "?" or txt[lentxt] == "!" or txt[lentxt] == ".":
-					await message.edit(txt)
-				else:
-					await message.edit(txt + ".")
+				await message.edit(txt)
