@@ -13,7 +13,7 @@ async def register(cb):
 class KeyboardSwitcherMod(loader.Module):
     """Зміна розкладки клавіатури в тексті"""
     strings = {
-        "name": "KeyboardSwitcher"}
+        "name": "RakenSwitchMod"}
 
     async def switchuacmd(self, message):
         """квіточки."""
