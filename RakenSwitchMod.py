@@ -14,6 +14,7 @@ class KeyboardSwitcherMod(loader.Module):
 	"""Зміна розкладки клавіатури в тексті"""
 	strings = {
 		"name": "RakenSwitchMod"}
+
 	async def switchuacmd(self, message):
 		"""квіточки."""
 		UaKeys = """'йцукенгшщзхїфівапролджєячсмитьбю.'"№;%:?ЙЦУКЕНГШЩЗХЇФІВАПРОЛДЖЄ/ЯЧСМИТЬБЮ,"""
