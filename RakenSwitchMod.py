@@ -6,14 +6,14 @@ logger = logging.getLogger(__name__)
 
 
 async def register(cb):
-    cb(KeyboardSwitcherMod())
+	cb(KeyboardSwitcherMod())
 
 
 @loader.tds
 class KeyboardSwitcherMod(loader.Module):
-    """Зміна розкладки клавіатури в тексті"""
-    strings = {
-        "name": "RakenSwitchMod"}
+	"""Зміна розкладки клавіатури в тексті"""
+	strings = {
+		"name": "RakenSwitchMod"}
 
 	async def switchuacmd(self, message):
 		"""квіточки."""
