@@ -44,7 +44,7 @@ class KeyboardSwitcherMod(loader.Module):
             text = str.translate(text, change)
             await message.edit(text)
             
-     async def switchrucmd(self, message):
+    async def switchrucmd(self, message):
         """квіточки."""
         RuKeys = """'йцукенгшщзхъфывапролджэячсмитьбю.'"№;%:?ЙЦУКЕНГШЩЗХЪФЫВАПРОЛДЖЭ/ЯЧСМИТЬБЮ,"""
         EnKeys = """`qwertyuiop[]asdfghjkl;'zxcvbnm,./~@#$%^&QWERTYUIOP{}ASDFGHJKL:"|ZXCVBNM<>?"""
